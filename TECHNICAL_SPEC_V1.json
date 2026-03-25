@@ -1,0 +1,46 @@
+{
+  "project_name": "Planetary-Resonance-2026",
+  "protocol_id": "PR-X-001-GUARDIANS",
+  "version": "1.0.0-alpha.tech",
+  "core_logic": {
+    "system_state": "Decentralized_Resource_Registry",
+    "consensus_mechanism": "Proof-of-Resonance (PoR)",
+    "currency_unit": "Resonance_Credit (RC)",
+    "anchor_asset": "1_kWh_Global_Average_Energy"
+  },
+  "mathematical_parameters": {
+    "BRP_formula": "BRP = (E_gen * ?) / (C_cons + R_loss)",
+    "target_resonance": 0.9997,
+    "description": "Aiming for near-unity energy. E_gen = Generation, C_cons = Consumption, R_loss = Entropy loss."
+  },
+  "resource_rejection_algorithm": {
+    "trigger": "Threshold_Exceedance",
+    "logic": "IF individual_accumulation > global_median * 7 THEN initiate_redistribution",
+    "mechanism": "Dynamic_Tax_Escalation",
+    "rejection_rate": "Exponential (2^n)",
+    "target": "Excess_Resource_Pool"
+  },
+  "epp_modules": [
+    {
+      "id": "EPP-01",
+      "name": "Subsurface_Registry",
+      "status": "Immutable",
+      "access": "Public_Read_Only"
+    },
+    {
+      "id": "EPP-02",
+      "name": "AI_Arbiter_Oracle",
+      "function": "Resource_Allocation_Decision",
+      "constraints": ["Anti-Corruption_Protocol", "No_Human_Override"]
+    }
+  ],
+  "security_protocols": {
+    "anonymity_layer": "Zero-Knowledge_Proofs (zk-SNARKs)",
+    "node_distribution": "Global_Mesh_Network",
+    "anti_fragility": "Automatic_Node_Relocation"
+  },
+  "meta": {
+    "author": "The_Guardians_Group",
+    "message": "The system is the law. The law is the code. Resistance is inefficient."
+  }
+}
